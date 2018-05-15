@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--news.html-->
+<!--updates.html-->
 <head>
   <title>Arcus Help Page</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -17,10 +17,10 @@
         <a id="home" class="item--hover" href="index.html">Home</a>
       </li>
       <li class="navbar__item">
-        <a id="news" class="item--hover selected" href="news.html">News</a>
+        <a id="news" class="item--hover" href="news.html">News</a>
       </li>
       <li class="navbar__item">
-        <a id="updates" class="item--hover" href="updates.html">Updates</a>
+        <a id="updates" class="item--hover selected" href="updates.html">Updates</a>
       </li>
       <li class="navbar__item">
         <a id="faq" class="item--hover" href="faq.html">Faq</a>
@@ -31,8 +31,8 @@
     </ul>
   </nav>
   <div class="main">
-    <div id="content__news">
-      <h1 class="content__title">News</h1>
+    <div id="content__updates">
+      <h1 class="content__title">Updates</h1>
 
 
     </div>
@@ -42,10 +42,10 @@
   <script>
     $(document).ready(function () {
       $.getJSON('posts.json', function (data) {
-        $.each(data.news, function (i,g){
-          var news_content = '<div class="content"><div class="content__header"><img src="Content/Avatar.svg"><span><p class="header--title">' + g.title + '</p><p class="header--author">' + g.author + '</p></span></div><div class="content__body"><p>' + g.content + '</p></div><div class="content__footer"><a class="content__button button--hover">Read More...</a></div></div>';
+        $.each(data.updates, function (i,g){
+          var update_content = '<div class="content"><div class="content__header"><img src="Content/Avatar.svg"><span><p class="header--title">' + g.title + '</p><p class="header--author">' + g.author + '</p></span></div><div class="content__body"><p>' + g.content + '</p></div><div class="content__footer"><a class="content__button button--hover">Read More...</a></div></div>';
 
-          $(news_content).appendTo("#content__news");
+          $(update_content).appendTo("#content__updates");
         });
       });
     });
