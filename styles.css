@@ -113,8 +113,9 @@ ul, p {
 .content__button {
   padding: 4px 40px;
   color: white;
-  background: orange;
+  background: rgb(255,151,70);
   border-radius: 25px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
 .item--hover:hover {
@@ -128,5 +129,5 @@ ul, p {
 }
 
 .selected {
-  box-shadow: inset 0 -3px orange
+  box-shadow: inset 0 -3px rgb(255,185,131)
 }
