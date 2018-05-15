@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--news.html-->
+<head>
+  <title>Arcus Help Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="title">
+    <img src="Content/ArcusLogo.png" style="width: 91px; height: 105px;"></img>
+  </div>
+  <nav class="navbar">
+    <ul class="navbar__list">
+      <li class="navbar__item">
+        <a id="home" class="item--hover" href="index.html">Home</a>
+      </li>
+      <li class="navbar__item">
+        <a id="news" class="item--hover selected" href="news.html">News</a>
+      </li>
+      <li class="navbar__item">
+        <a id="updates" class="item--hover" href="">Updates</a>
+      </li>
+      <li class="navbar__item">
+        <a id="faq" class="item--hover" href="">Faq</a>
+      </li>
+      <li class="navbar__item">
+        <a id="contact" class="item--hover" href="">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="main">
+    <div id="content__news">
+      <h1 class="content__title">News</h1>
+
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+  <script>
+    $(document).ready(function () {
+      $.getJSON('posts.json', function (data) {
+        $.each(data.news, function (i,g){
+          var news_content = '<div class="content"><div class="content__header"><img src="Content/Avatar.svg"><span><p class="header--title">' + g.title + '</p><p class="header--author">' + g.author + '</p></span></div><div class="content__body"><p>' + g.content + '</p></div><div class="content__footer"><a class="content__button button--hover">Read More...</a></div></div>';
+
+          $(news_content).appendTo("#content__news");
+        });
+      });
+    });
+  </script>
+</body>

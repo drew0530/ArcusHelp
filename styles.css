@@ -55,10 +55,10 @@ ul, p {
 
 .content {
   position: relative;
+  margin-bottom: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  min-height: 250px;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -72,6 +72,7 @@ ul, p {
 
 .content__body {
   margin-top: 30px;
+  padding-bottom: 60px;
 }
 
 .content__body p {
