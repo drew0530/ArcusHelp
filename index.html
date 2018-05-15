@@ -31,10 +31,10 @@
     </ul>
   </nav>
   <div class="main">
-    <div id="updates">
+    <div id="content__updates">
       <h1 class="content__title">Updates</h1>
 
-      <div class="content">
+      <!-- <div class="content">
         <div class="content__header">
           <img src="Content/Avatar.svg">
           <span>
@@ -54,10 +54,10 @@
           <div class="content__footer">
             <a class="content__button button--hover">Read More...</a>
           </div>
-        </div>
+        </div> -->
     </div>
 
-    <div id="news">
+    <div id="content__news">
       <h1 class="content__title">News</h1>
 
       <!-- <div class="content">
@@ -94,10 +94,14 @@
     $(document).ready(function () {
       $.getJSON('posts.json', function (data) {
         var f = data.updates[0];
-        console.log(f);
+        var g = data.news[0];
 
-        var content = '<div class="content"><div class="content__header"><img src="Content/Avatar.svg"><span><p class="header--title">' + f.title + '</p><p class="header--author">' + f.author + '</p></span></div><div class="content__body"><p>' + f.content + '</p></div><div class="content__footer"><a class="content__button button--hover">Read More...</a></div></div>';
-        $("#news").append(content);
+        var update_content = '<div class="content"><div class="content__header"><img src="Content/Avatar.svg"><span><p class="header--title">' + f.title + '</p><p class="header--author">' + f.author + '</p></span></div><div class="content__body"><p>' + f.content + '</p></div><div class="content__footer"><a class="content__button button--hover">Read More...</a></div></div>';
+
+        var news_content = '<div class="content"><div class="content__header"><img src="Content/Avatar.svg"><span><p class="header--title">' + g.title + '</p><p class="header--author">' + g.author + '</p></span></div><div class="content__body"><p>' + g.content + '</p></div><div class="content__footer"><a class="content__button button--hover">Read More...</a></div></div>';
+
+        $(update_content).appendTo("#content__updates");
+        $(news_content).appendTo("#content__news");
       });
     });
   </script>
