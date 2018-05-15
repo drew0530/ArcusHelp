@@ -1,58 +1,72 @@
 <!DOCTYPE html>
+
 <head>
   <title>Arcus Help Page</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="title">
-    <img src="ArcusLogo.png" style="width: 91px; height: 105px;"></img>
+    <img src="Content/ArcusLogo.png" style="width: 91px; height: 105px;"></img>
   </div>
   <nav class="navbar">
     <ul class="navbar__list">
-      <li class="navbar__item"><a id="home" class="item--hover selected" onclick="nav('home')">Home</a></li>
-      <li class="navbar__item"><a id="news" class="item--hover" onclick="nav('news')">News</a></li>
-      <li class="navbar__item"><a id="updates" class="item--hover" onclick="nav('updates')">Updates</a></li>
-      <li class="navbar__item"><a id="faq" class="item--hover" onclick="nav('faq')">Faq</a></li>
-      <li class="navbar__item"><a id="contact" class="item--hover" onclick="nav('contact')">Contact</a></li>
+      <li class="navbar__item">
+        <a id="home" class="item--hover selected" href="index.html">Home</a>
+      </li>
+      <li class="navbar__item">
+        <a id="news" class="item--hover" href="">News</a>
+      </li>
+      <li class="navbar__item">
+        <a id="updates" class="item--hover" href="">Updates</a>
+      </li>
+      <li class="navbar__item">
+        <a id="faq" class="item--hover" href="">Faq</a>
+      </li>
+      <li class="navbar__item">
+        <a id="contact" class="item--hover" href="">Contact</a>
+      </li>
     </ul>
   </nav>
   <div class="main">
+    <div id="updates">
+      <h1 class="content__title">Updates</h1>
 
-    <h1 class="content__title">Updates</h1>
-
-    <div class="content">
-      <div class="content__header">
-        <img src="Avatar.svg">
-        <span>
-          <p class="header--title">Load History Changes</p>
-          <p class="header--author">Jennifer Brittingham</p>
-        </span>
-      </div>
-      <div class="content__body">
-        <p>Users will soon be logging in to a new look and feel for ARCUS!<br/><br/>
-          Soon, when users log in to the ARCUS system, instead of the Dashboard, 
-          users will now be given a menu selector to guide them into the proper 
-          area. The new menu will still feature all of the same options, but will 
-          be rearranged in such a way as to provide more screen space for the 
-          grids and pages while still providing robust and user-friendly menu 
-          options.</p>
-      </div>
-      <div class="content__footer">
-        <a class="content__button button--hover">Read More...</a>
-      </div>
+      <div class="content">
+        <div class="content__header">
+          <img src="Content/Avatar.svg">
+          <span>
+            <p class="header--title">Load History Changes</p>
+            <p class="header--author">Jennifer Brittingham</p>
+          </span>
+        </div>
+        <div class="content__body">
+          <p>Users will soon be logging in to a new look and feel for ARCUS!<br/><br/>
+            Soon, when users log in to the ARCUS system, instead of the Dashboard, 
+            users will now be given a menu selector to guide them into the proper 
+            area. The new menu will still feature all of the same options, but will 
+            be rearranged in such a way as to provide more screen space for the 
+            grids and pages while still providing robust and user-friendly menu 
+            options.</p>
+          </div>
+          <div class="content__footer">
+            <a class="content__button button--hover">Read More...</a>
+          </div>
+        </div>
     </div>
 
-    <h1 class="content__title">News</h1>
+    <div id="news">
+      <h1 class="content__title">News</h1>
 
-    <div class="content">
-      <div class="content__header">
-        <img src="Avatar.svg">
-        <span>
-          <p class="header--title">New Entry Interface: Coming Soon!</p>
-          <p class="header--author">Jennifer Brittingham</p>
-        </span>
+      <!-- <div class="content">
+        <div class="content__header">
+          <img src="Content/Avatar.svg">
+          <span>
+            <p class="header--title">New Entry Interface: Coming Soon!</p>
+            <p class="header--author">Jennifer Brittingham</p>
+          </span>
         </div>
         <div class="content__body">
           <p>Changes have been made to how you view your Load History 
@@ -66,12 +80,25 @@
             new toggle switch feature has been implemented on the Load 
             grid to more easily search through the Loads, regardless of 
             their status.</p>
-        </div>
-        <div class="content__footer">
-          <a class="content__button button--hover">Read More...</a>
-        </div>
+          </div>
+          <div class="content__footer">
+            <a class="content__button button--hover">Read More...</a>
+          </div>
+        </div> -->
     </div>
   </div>
-  
-  <script href="scripts.js"></script>
+
+  <script type="text/javascript" href="scripts.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+  <script>
+    $(document).ready(function () {
+      $.getJSON('posts.json', function (data) {
+        var f = data.updates[0];
+        console.log(f);
+
+        var content = '<div class="content"><div class="content__header"><img src="Content/Avatar.svg"><span><p class="header--title">' + f.title + '</p><p class="header--author">' + f.author + '</p></span></div><div class="content__body"><p>' + f.content + '</p></div><div class="content__footer"><a class="content__button button--hover">Read More...</a></div></div>';
+        $("#news").append(content);
+      });
+    });
+  </script>
 </body>

@@ -1,0 +1,42 @@
+{
+  "news": [
+    {
+      "title": "New Entry Interface – Coming Soon!",
+      "author": "Jennifer Brittingham",
+      "date": "March 20, 2018",
+      "content": "Users will soon be logging in to a new look and feel for ARCUS!<br><br>Soon, when users log in to the ARCUS system, instead of the Dashboard, users will now be given a menu selector to guide them into the proper area. The new menu will still feature all of the same options, but will be rearranged in such a way as to provide more screen space for the grids and pages while still providing robust and user-friendly menu options."
+    },
+    {
+      "title": "Introducing the Data Tab",
+      "author": "Jennifer Brittingham",
+      "date": "February 16, 2018",
+      "content": "The long awaited Data Tab is now here!<br><br>The new Data Tab has been inserted into the ARCUS main menu and has options for the Customer Search, Carrier Search, Stop Locations and Load History.<br><br>The Customer option is the replacement for the current Customer Search in the Broker system.<br><br>Selecting this option will show a grid with all of the Customers for your Branch. Above the grid on the left side is a search box where you can search for particular customers in the Name (“Name” column) and Alternate Name (“AltName” column). As with other grids in ARCUS, the sort and filter options are available in the title bars of each column. Clicking on the Customer Name (the blue link) will show the statistics for that Customer.<br><br>The Carrier option is the replacement for the current Carrier Search in the Broker system."
+    },
+    {
+      "title": "New Load History Area",
+      "author": "Jennifer Brittingham",
+      "date": "February 9, 2018",
+      "content": "A new tab named “Data” has been inserted into the ARCUS menu today. This will be the new home of several future additions, including the Carrier and Customer searches, as well as the new Load History grid. <br><br>When you click on the “Data” link in the menu, a pop-out menu will appear. Click on the “Load History” option to get to the new grid. <br><br>Here you will see the familiar grid where you can still sort and filter the loads depending on various criteria in the same ways as you would sort or filter the grid on the Order or Load grids. <br><br>You will also notice that, just as the other grids, you can also get to the different options by clicking the drop down arrow next to the Load Number. <br><br>Keep in mind that these Loads are in Settled status and therefore cannot be updated or edited."
+    }
+  ],
+  "updates": [
+    {
+      "title": "Load History Changes",
+      "author": "Jennifer Brittingham",
+      "date": "May 14, 2018",
+      "content": "Changes have been made to how you view your Load History and Settled Loads in ARCUS. <br><br>Settled Loads used to be viewed in the Load History grid of the Data Maintenance section of ARCUS. This was showing to be ineffective as many times Load numbers would need to be searched in the Load grid as well as the Load History grid in order to find Loads that may be in the process of being settled by the Accounting department. To fix this, a new toggle switch feature has been implemented on the Load grid to more easily search through the Loads, regardless of their status."
+    },
+    {
+      "title": "Advances Column on Load Grid",
+      "author": "Jennifer Brittingham",
+      "date": "April 18, 2018",
+      "content": "An Advances column has been added to the Load Grid. This column will show a total of all Comchek Advances issued on the Load. This column can be sorted and filtered just the same as other columns on the grid, just as it can be turned off and moved."
+    },
+    {
+      "title": "Printing Settlement Documents",
+      "author": "Jennifer Brittingham",
+      "date": "April 2, 2018",
+      "content": "Users are able to print copies of the documents that have been scanned into the system, either by their branch or by the Corporate offices. <br><br>A new “Print All” button has been added to the Load Settlement screen which generates a PDF of all of the scanned documents. This PDF file can then be saved or printed. <br><br>You can access the Load Settlement page by clicking on the drop down arrow next to the Load Number (this can be done in either the Load Grid or in the Load History) and then selecting “Settlement.”"
+    }
+  ]
+}

@@ -45,16 +45,12 @@ ul, p {
 
 .navbar__item a {
   padding: 7px 20px;
+  text-decoration: none;
+  color: white;
 }
-
 
 .main {
   margin: 20px 20px 20px 20px;
-}
-
-.main > div {
-  height: 250px;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
 .content {
@@ -62,6 +58,8 @@ ul, p {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  min-height: 250px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
 .content__title {
@@ -83,6 +81,7 @@ ul, p {
 .content__header {
   display: flex;
   align-items: center;
+  top:0;
 }
 
 .content__header span {
@@ -131,3 +130,36 @@ ul, p {
 .selected {
   box-shadow: inset 0 -3px rgb(255,185,131)
 }
+
+/* $color-primary1: #37474F; // Slate
+$color-primary2: #64B0D8; // Sky Blue
+$color-primary3: #FF9746; // Tangerine
+$color-primary4: #CCCCCC; // Silver
+
+$color-secondary1: #FFDF81; // Sunny Yellow
+$color-secondary2: #61668A; // Purple Blue
+$color-secondary3: #2F3352; // Eggplant
+$color-secondary4: #66DDCA; // Teal
+
+$color-shades1: #FFE0C9; // Light Orange
+$color-shades2: #DAEFFA; // Light Blue
+$color-shades3: #B8EDE5; // Light Teal
+
+$color-greys1: #ECEFF1; // Cirrus Grey
+$color-greys2: #B6B6B6; // Stratus Grey
+$color-greys3: #888888; // Grey
+
+$color-success: #66DDCA;
+$color-danger: #FF4646;
+$color-warning: #FF9746;
+$color-info: #64B0D8;
+
+$color-success-background: #B8EDE5;
+$color-danger-background: #FFC9C9;
+$color-warning-background: #FFE0C9;
+$color-info-background: #DAEFFA;
+
+$color-menu: #C1C1C1;
+$color-menu-background: #22222A;
+$color-menu-primary: #7DC6EC;
+$color-menu-divider: #424242; */
