@@ -6,6 +6,16 @@ ul, p {
   margin: 0;
 }
 
+.info {
+  position: fixed;
+  top:0;
+  right:0;
+  z-index: 10; 
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+}
+
 .title {
   top: 0;
   height: 160px;
@@ -41,6 +51,7 @@ ul, p {
   font-size: 24px;
   color: #fff;
   text-transform: uppercase;
+  font-weight:300;
 }
 
 .navbar__item a {
