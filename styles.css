@@ -1,3 +1,11 @@
+/*
+Theme Name: Arcus Help Theme
+Author: Andrew Williamson
+Description: Wordpress theme for Arcus LM help site
+Version: 0.0.1
+Tags:
+*/
+
 * {
   font-family: "Open Sans";
 }
@@ -38,13 +46,13 @@ ul, p {
 
 .navbar__item {
   display: inline-block;
-  font-size: 24px;
+  font-size: 18px;
   color: #fff;
   text-transform: uppercase;
 }
 
 .navbar__item a {
-  padding: 7px 20px;
+  padding: 11px 20px;
   text-decoration: none;
   color: white;
 }
@@ -54,6 +62,7 @@ ul, p {
 }
 
 .content {
+  background: white;
   position: relative;
   margin-bottom: 20px;
   padding: 20px;
@@ -63,8 +72,8 @@ ul, p {
 }
 
 .content__title {
-  margin-top: 50px;
-  font-size: 24px;
+  margin-top: 38px;
+  font-size: 32px;
   color: #64B0D8;
   text-transform: uppercase;
   font-weight: 400;
